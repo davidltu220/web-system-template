@@ -1,11 +1,12 @@
-# WEB system
+# Random Jokes
 - [ ] Replace "WEB system" with your system name
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+- [ ] The main aim of this system is to generate random jokes and provide high quality humor. There is no age limit because all the jokes that have violent content are censored. System lets you to sort the content you want to see. This can be done with integrated filter in system.
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
+- Joke: id(length=10000), title(string(length=100)), content(string(length=100000)),date_posted(date), image, likes(number(length>0)), last_like_location(string(length=50))
+
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
     - [ ] ID - depending on specific service this could be a number or string
@@ -16,6 +17,12 @@
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
+
+- Retrieve a random chuck joke: GET https://api.chucknorris.io/jokes/random 
+- Post like: POST /api/jokes/:id/like
+- Post location: GET /api/jokes/:id/location
+- Upload image: POST /api/jokes/:id/image
+
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
 - [ ] API should have at least 4 methods
