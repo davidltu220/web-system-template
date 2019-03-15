@@ -20,8 +20,14 @@
 
 - Retrieve a random chuck joke: GET https://api.chucknorris.io/jokes/random 
 - Post like: POST /api/jokes/:id/like
+    - 400 - {error: 'invalid joke ID'}
 - Post location: GET /api/jokes/:id/location
+    - 400 - {error: 'invalid joke ID'}
 - Upload image: POST /api/jokes/:id/image
+    - 400 - {error: 'invalid joke ID'}
+
+- 404 - {error: 'page not found'}
+- 500 - {error: 'server error'}
 
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
@@ -49,3 +55,5 @@
         - [ ] Depending on chosen header of API method that returns multiple entities, it should be posible to select specific 10 entities starting index, sort entities by attribute, filter entities by attribute pattern, or other (should be approved by Product Owner (PO))
     - [ ] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
         - [ ] Each attribute should have a dedicated editor field: text box for string or number, checkbox or radio buttons for boolean, date picker for date, etc.
+
+https://wireframe.cc/0n7yxX
