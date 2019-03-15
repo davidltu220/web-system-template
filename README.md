@@ -25,6 +25,7 @@
     - 400 - {error: 'invalid joke ID'}
 - Upload image: POST /api/jokes/:id/image
     - 400 - {error: 'invalid joke ID'}
+    - 400 - {error: 'wrong image format'}
 
 - 404 - {error: 'page not found'}
 - 500 - {error: 'server error'}
