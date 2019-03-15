@@ -5,7 +5,7 @@
 - [ ] The main aim of this system is to generate random jokes and provide high quality humor. There is no age limit because all the jokes that have violent content are censored. System lets you to sort the content you want to see. This can be done with integrated filter in system.
 
 ## Entity definition
-- Joke: id(length=10000), title(string(length=100)), content(string(length=100000)),date_posted(date), image, likes(number(length>0)), last_like_location(string(length=50))
+- Joke: id(number(length=10000)), title(string(length=100)), content(string(length=100000)), date_posted(date), image, likes(number(length>0)), last_like_location(string(length=50))
 
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
