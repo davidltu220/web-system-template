@@ -2,6 +2,71 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <style>
+        body {
+            background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8199d917682963.5773d9006ea33.jpg);
+            margin-right: 150px;
+            margin-left: 150px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-attachment: fixed;
+        }
+        .myButton {
+        background-color:#f2b009;
+        -moz-border-radius:28px;
+        -webkit-border-radius:28px;
+        border-radius:28px;
+        border:1px solid #fff714;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Impact;
+        font-size:28px;
+        padding:16px 31px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #b8a2b8;
+    }
+    .myButton:hover {
+        background-color:#ffe100;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+        #title_image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+            }
+        #C_Norris {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 250px;
+            width: 250px;
+            }
+        #line {
+            border-top: 10px solid red;
+            border-radius: 5px;
+        }
+        #DontMess {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height:70px;
+        }
+        #Heseesyou {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 250px;
+        }
+    </style>
     <title>Web App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +74,31 @@
 
 <body>
     <div id="root"></div>
+    <img id="title_image" src="RandomJokes.gif" alt="RandomJokes">
+    <img id="Heseesyou" src="heswatching.gif" alt="ChuckApproves">
+    <img id="DontMess" src="messwithchuck.gif" alt="MessingwithChuck">
+    <br>
+    <hr id="line">
+        <div>
+            <div class="chuckjokes">
+                <img class="icon">
+                <p class="id"></p>
+                <p class="value"></p>
+            </div>
+            <h1 style="font-family: Lucida Console; color: red; padding-left: 100px">JOKE ID:</h1>
+            <div style="padding-bottom:150px">
+            <button class="myButton" style="float:right;">Upload image</button>
+            </div>
+            <br>
+            <div style="padding-bottom:100px; padding-right: 50px">
+            <button class="myButton" style="float:right">Like it</button>
+            </div>
+        </div>
+        <br>
+    <hr id="line">
+    <div style="padding-top:40px">
+    <button class="myButton" style="float:right">Next Joke</button>
+    </div>
 </body>
 
 </html>
