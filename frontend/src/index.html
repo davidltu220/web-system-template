@@ -3,8 +3,23 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="/backend/index.js"></script>
     <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        }
+
+        .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        }
         body {
             background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8199d917682963.5773d9006ea33.jpg);
             margin-right: 150px;
@@ -70,34 +85,43 @@
     <title>Web App</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript">
+        function reloadPage(){
+            location.reload(true);
+        }
+    </script>
 </head>
 
 <body>
     <div id="root"></div>
     <img id="title_image" src="RandomJokes.gif" alt="RandomJokes">
-    <img id="Heseesyou" src="heswatching.gif" alt="ChuckApproves">
+    <div class="row">
+        <div class="column">
+            <img id="texasRanger" src="texas-ranger-badge-psd-414420.png" alt="ranger" height="200" width="200">
+        </div>
+        <div class="column">
+            <img id="Heseesyou" src="heswatching.gif" alt="ChuckApproves">
+        </div>
+    </div>
     <img id="DontMess" src="messwithchuck.gif" alt="MessingwithChuck">
     <br>
     <hr id="line">
         <div>
-            <div class="chuckjokes">
-                <img class="icon">
-                <p class="id"></p>
-                <p class="value"></p>
-            </div>
-            <h1 style="font-family: Lucida Console; color: red; padding-left: 100px">JOKE ID:</h1>
+            <h1 style="font-family: Lucida Console; color: red; padding-left: 100px">JOKE ID: <span class="id"></span></h1>
             <div style="padding-bottom:150px">
-            <button class="myButton" style="float:right;">Upload image</button>
+            <img id="addedPicture" src="">
+            <input id="pictureUrl" type="search" class="myButton" style="float: right;"/>
+            <button class="myButton" style="float:right;" id="uploadButton">Upload image</button>
             </div>
-            <br>
+            <h1 style="font-family: Lucida Console; color: red; padding-left: 100px"><p class="value"></p></h1>
             <div style="padding-bottom:100px; padding-right: 50px">
-            <button class="myButton" style="float:right">Like it</button>
-            </div>
+            <button class="myButton" disabled style="float:right"><span class="likes"></span></button>  
+            <button class="myButton" style="float:right" id="likesButton"">Like it</button>
         </div>
         <br>
     <hr id="line">
     <div style="padding-top:40px">
-    <button class="myButton" style="float:right">Next Joke</button>
+    <button class="myButton" style="float:right" onclick="reloadPage();">Next Joke</button>
     </div>
 </body>
 
